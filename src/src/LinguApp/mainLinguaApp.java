@@ -6,8 +6,14 @@ public class mainLinguaApp {
         cadastroIdiomas(lapp);
         cadastroUsuarios(lapp);
         System.out.println(lapp.mostrarIdiomas());
-        lapp.adicionaCursoUsuario(1,1);
         System.out.println(lapp.detalharUsuario(1));
+        escolhaDosCursos(lapp);
+        System.out.println("--------");
+        System.out.println(lapp.detalharUsuario(1));
+        System.out.println("--------");
+        realizaAtividadesAmelie(lapp);
+        System.out.println(lapp.mostraProgressoDoUsuario(1,0));
+
 
         }
     private static void cadastroIdiomas(LinguApp lapp) {
@@ -18,6 +24,15 @@ public class mainLinguaApp {
     private static void cadastroUsuarios(LinguApp lapp) {
         lapp.cadastrarUsuario("João Henrique", "jhenrique@gmail.com", "JHzin01", "Português");
         lapp.cadastrarUsuario("Amelie Poulain", "aameliepoulainn@gmail.com", "AmeliePoulain", "Francês");
+    }
+
+    private static void escolhaDosCursos(LinguApp lapp) {
+        lapp.adicionaCursoUsuario(1,0);
+    }
+    private static void realizaAtividadesAmelie(LinguApp lapp) {
+        for (int i = 0; i < 2010; i++) {
+            lapp.realizaAtividadeDoUsuario(1, 0);
+        }
     }
 
 

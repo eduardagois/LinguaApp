@@ -35,4 +35,23 @@ public class LinguApp {
     public String detalharUsuario(int posicao) {
         return usuarios[posicao].toString();
     }
+    public Usuario getUsuario(int posicao) {
+        if (posicao <= 200 && posicao >= 1) {
+            return usuarios[posicao];
+        }
+        return null;
+    }
+    public Idioma getIdioma(int posicao) {
+        if (posicao <= 10 && posicao >= 1) {
+            return idiomas[posicao];
+        }
+        return null;
+    }
+    public void realizaAtividadeDoUsuario(int posicaoUsuario, int posicaoCurso) {
+        usuarios[posicaoUsuario].realizaAtividade(posicaoCurso);
+    }
+    public String mostraProgressoDoUsuario(int posicaoUsuario, int posicaoCurso) {
+        return usuarios[posicaoUsuario].mostraProgressoDoCurso(posicaoCurso);
+    }
+
 }
